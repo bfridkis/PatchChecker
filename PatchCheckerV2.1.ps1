@@ -80,7 +80,7 @@ function processRequest {
     else {
         write-output "`n* Grouping by hostname will result in a data set that includes only patches applied,  *"
         write-output   "* one row per hostname. The 'Patched' attribute will only yield false if NONE of the  *"
-        write-output   "* specified patches have been applied. (i.e. 'Patched` will yield ""True"" so long as    *"
+        write-output   "* specified patches have been applied. (i.e. 'Patched' will yield ""True"" so long as    *"
         write-output   "*  at least one of the patches exists.) If grouping by hostname is not enabled, each  *"
         write-output   "*   patch status ('True' or 'False') is shown for each hostname on a dedicated row,   *"
         write-output   "*                                grouped by patch.                                    *`n"
