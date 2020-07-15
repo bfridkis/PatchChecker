@@ -214,7 +214,7 @@ function outputPrompt {
     write-output "`n"
 		    
     do { $outputMode = read-host -prompt "Save To File (1), Console Output (2), or Both (3)" }
-    while ($outputMode -ne 1 -and $outputMode -ne 2 -and $outputMode -ne 3 -and $outputMode -ne 4 -and
+    while ($outputMode -ne 1 -and $outputMode -ne 2 -and $outputMode -ne 3 -and
            $outputMode.ToUpper() -ne "Q" -and $outputMode.ToUpper() -ne "B")
 
     if ($outputMode.ToUpper() -eq "Q") { exit }
