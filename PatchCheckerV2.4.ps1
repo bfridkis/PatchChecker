@@ -534,7 +534,7 @@ else {
 
     write-output "SYNTAX"
     write-output "`tPatchCheckerV2.4.ps1 [-Option <int32> {1 = Validate Patches; 2 = List Patches; 3 = Compliance Check}]"
-    write-output "`t                     [-CompsFilePath <string[]]"
+    write-output "`t                     [-CompsFilePath <string[]>]"
     write-output "`t                     [-PatchesFilePath <string[]>]"
     write-output "`t                     [-AllNodes <bool> or <string[]> {'TRUE' or 'FALSE'}]"
     write-output "`t                     [-OutputMode <int32> {1 = Save to File; 2 = Console Output; 3 = Save to File and Console Output}]"
