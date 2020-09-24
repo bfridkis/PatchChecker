@@ -1,1 +1,0 @@
-Powershell.exe -ExecutionPolicy Bypass -File C:\Users\admbfridkis\Desktop\PatchChecker\ICS_ScoreCard_Utility-L3.5-EmailResults.ps1
