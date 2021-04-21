@@ -44,7 +44,7 @@
                         $currComp = $_
                         Try {
                             $os = (Get-WmiObject -ComputerName $_ -Class 'Win32_OperatingSystem' -ErrorAction Stop).Caption
-					        if ($os -like "*Windows 10*" -or $os -like "*2012*" -or $os -like "*2016*" -or $os -like "*2019*") {
+					        #if ($os -like "*Windows 10*" -or $os -like "*2012*" -or $os -like "*2016*" -or $os -like "*2019*") {
                                 $wmiHash = Get-WmiObject -ComputerName $_ -Class 'Win32_QuickFixEngineering' -ErrorAction Continue
 					            $wmiHash | Select-Object -Property PSComputerName, Description, HotFixID, InstalledBy, InstalledOn |
 							                Sort-Object InstalledOn | Select-Object -Last 1 @{ n = "Hostname" ; e = {$_.PSComputerName}},
@@ -52,7 +52,7 @@
 																	                        @{ n = "Last Patch Installed" ; e = {$_.HotfixID}},
 																	                        @{ n = "Install Date" ; e = {"$($_.InstalledOn.Month)/$($_.InstalledOn.Day)/$($_.InstalledOn.Year)"}}, 
 																	                        @{ n = "Poller" ; e = {"WRRSWOR01"}} 
-				            }
+				            #}
                         } 
                         Catch { Add-Content -Path  $errorLogFilePath_CD -Value "$($currComp): $_.Exception.Message" }
                 } | Select-Object -OutVariable Export #*>$null
